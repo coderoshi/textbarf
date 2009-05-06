@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-language" content="en">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+<meta name="description" content="Text Barf is a big text message board where anyone can post to everyone">
+<meta name="viewport" content="width=720;" />
+<title>Text Barf</title>
+<style>
+html,body{height:100%;margin:0;padding:0;font-family:'Lucida Grande';}
+hr{color:black;}
+#content{text-align:center;width:720px;}
+h1{font-size:32px;padding:0;margin:0;background-color:black;color:rgb(239,239,239);font-weight:bold;border:2px solid white;}
+h2{font-size:20px;padding:0;margin:1em;color:#900000;}
+.date{font-size:20px;background-color:black;color:rgb(239,239,239);font-weight:bold;padding-left:0.5em;}
+.time{font-size:14px;background-color:rgb(255,255,204);border-bottom:1px solid rgb(239,239,239);padding-left:2em;}
+.quote{font-size:24px;background-color:rgb(217,231,251);padding-left:1em;}
+.barfs ul{margin:0;padding:0;text-align:left;}
+.barfs ul li{list-style:none;border-bottom:10px solid white;}
+.help{padding:0;text-align:left;}
+.phonequote{color:gray;font-style:italic;}
+.help .quote{font-size:14px;display:inline;padding:2px;}
+.more{font-style:italic;font-size:12px;}
+#footer {font-size:9px;}
+</style>
+<body>
+<div id="wrapper" align="center">
+ <div id="content">
+  <h1>Text Barf<i>!!</i></h1>
+  <h2>Text <em>"tbarf"</em> to 41411 then write a message</h2>
+  <div class="help">
+    "<span class="phonequote"><b>tbarf</b> Look at me - I'm barfing text!</span>" will show up here as: <div class="quote">Look at me - I'm barfing text!</div>
+  </div>
+  <hr noshade="noshade" />
+  <div class="barfs">
+    <ul>
+    {% for barf in barfs %}
+    {% ifchanged barf.date.date %}
+    <li><div class="date">{{ barf.date.date }}</div></li>
+    {% endifchanged %}
+    <li><div class="time">{{ barf.date|date:"P" }}</div><div class="quote">{{ barf.text }}</div></li>
+    {% endfor %}
+    </ul>
+  </div>
+ </div>
+ <div id="footer">
+  &copy;2009 <a href="http://www.coderoshi.com/">Coderoshi</a>
+  <div class="more">(psst... I won't spam or sell your number. I don't know that shit - I'm keeping it <b>real</b>.<br />Text response is from my text service - not me. I don't make any money here!<br />That said - your standard text rates will still apply)</div>
+ </div>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-8708281-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>
