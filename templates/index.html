@@ -38,7 +38,7 @@ h2{font-size:20px;padding:0;margin:1em;color:#900000;}
     {% ifchanged barf.date.date %}
     <li><div class="date">{{ barf.date.date }}</div></li>
     {% endifchanged %}
-    <li><div class="time">{{ barf.date|date:"P" }}</div><div class="quote">{{ barf.text }}</div></li>
+    <li><div class="time">{{ barf.date|date:"P" }}</div><div class="quote">{{ barf.text|escape }}</div></li>
     {% endfor %}
     </ul>
   </div>

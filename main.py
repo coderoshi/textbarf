@@ -46,6 +46,10 @@ class TxtBackHandler(webapp.RequestHandler):
     phone = self.request.get('min')
     if phone: phone = phone[-10:]
     
+    if not text:
+      self.response.out.write('Please enter a message!')
+      return
+    
     b = Barf(text=text, phone=phone)
     b.put()
     
