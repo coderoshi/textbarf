@@ -22,16 +22,26 @@ h2{font-size:20px;padding:0;margin:1em;color:#900000;}
 .help .quote{font-size:14px;display:inline;padding:2px;}
 .more{font-style:italic;font-size:12px;}
 #footer {font-size:9px;}
+#head a {font-size:10px;text-align:middle;text-decoration:none;color:blue;}
+#head img {vertical-align:middle;}
+#head .links {text-align:right;}
+.moar{font-size:smaller;}
 </style>
 <body>
 <div id="wrapper" align="center">
  <div id="content">
+ <div id="head">
   <h1>Text Barf<i>!!</i></h1>
   <h2>Text <em>"tbarf"</em> to 41411 then write a message</h2>
   <div class="help">
     "<span class="phonequote"><b>tbarf</b> Look at me - I'm barfing text!</span>" will show up here as: <div class="quote">Look at me - I'm barfing text!</div>
+    <br /><br /><span class="moar"><b>Note:</b> Subsequent texts can remove the "tbarf" label and just use "." (dot) eg: <span class="phonequote"><b>.</b> Here's more text!</span></span>
   </div>
   <hr noshade="noshade" />
+  <div class="links">
+  <a type="application/rss+xml" href="http://feeds2.feedburner.com/textbarf"><img src="/images/feed-icon-28x28.png" /> RSS!</a>
+  </div>
+  </div>
   <div class="barfs">
     <ul>
     {% for barf in barfs %}
@@ -45,7 +55,7 @@ h2{font-size:20px;padding:0;margin:1em;color:#900000;}
  </div>
  <div id="footer">
   &copy;2009 <a href="http://www.coderoshi.com/">Coderoshi</a>
-  <div class="more">(psst... I won't spam or sell your number. I don't know that shit - I'm keeping it <b>real</b>.<br />Text response is from my text service - not me. I don't make any money here!<br />That said - your standard text rates will still apply)</div>
+  <div class="more">(psst... I won't spam or sell your number. I don't know that shit - I'm keeping it <b>real</b>.<br />Text response is from my text service - not me. I don't make any money here!<br />That said - your standard text rates will still apply.<br />Finally - I'm not responsible for what gets posted here. Sorry.)</div>
  </div>
 </div>
 <script type="text/javascript">
